@@ -21,9 +21,9 @@ ORDER BY e.emp_no
 
 Snippet of above queries results:
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Deliverable 1 A](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1a_results.png)
 
-The Retirement Titles table is exported as retirement_titles.csv. View the CSV here: [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+The Retirement Titles table is exported as retirement_titles.csv. View the CSV here: [Retirement Titles](data/retirement_titles.csv)
 
 ***Deliverable 1 (Part 2 of 3):***
 
@@ -42,9 +42,9 @@ ORDER BY emp_no, to_date DESC;
 
 Snippet of above queries results:
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Deliverable 1 B](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1b_results.png)
 
-The Unique Titles table is exported as unique_titles.csv. View the CSV here: [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+The Unique Titles table is exported as unique_titles.csv. View the CSV here: [Unique Titles](data/unique_titles.csv)
 
 ***Deliverable 1 (Part 3 of 3):***
 
@@ -59,9 +59,9 @@ ORDER BY COUNT(*) DESC;
 Screenshot of above query results:
 
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Deliverable 1 C](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1c_results.png)
 
-The Retiring Titles table is exported as retiring_titles.csv. View the CSV here: [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+The Retiring Titles table is exported as retiring_titles.csv. View the CSV here: [Retiring Titles](data/retiring_titles.csv)
 
 ***Deliverable 2***
 
@@ -81,9 +81,9 @@ ORDER BY t.emp_no;
 ```
 Snippet of above query result:
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Mentorship Eligibility Results](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable2_results.png)
 
-The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Contribution guidelines for this project](docs/CONTRIBUTING.md)
+The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Mentorship Eligibility](data/mentorship_eligibilty.csv)
 
 ***Deliverable 3:***
 *This full readme is the requirement for deliverable 3.*
@@ -92,23 +92,23 @@ The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View
 
 - There are 300,024 employees in the Pewlett-Hackard Employee Database.
 - There are currently 72,548 positions that will soon be eligible for retirement!
-- The majority of the positions that will be vacant after the employees retire are senior level posiions. This includes Senior Engineers, Senior Staff, and Engineer roles. See the table below that outlines the positioins that will need to eventually be filled.
+- The majority of the positions that will be vacant after the employees retire are senior level positions. This includes Senior Engineers, Senior Staff, and Engineer roles.
 - Only 1,549 current employees will qualify for the mentorship program.
 
 ## Summary
 
-**1. How many roles will need to be filled as the "silver tsunami" begins to make an impact?** There will be a total of 72,548 positions that need to be filled as this tsunami takes place.
+**1. How many roles will need to be filled as the "silver tsunami" begins to make an impact?** There will be a total of 72,548 roles that need to be filled as this tsunami takes place.
 
-**2. Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?** Yes. From the data, it appears that there are many senior level soon to be retirees that will be able to mentor the next generation of senior level employees. And then those employees can mentor the other staff and new staff who take over their positions. The mentorship eligibility paramaters may need to be expanded though because based on the current standard, there will only be 1,549 employees who qualify for the mentorship program. Lots of retirees and very few employees to be mentored.
+**2. Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?** Yes. From the data, it appears that there are many senior level soon to be retirees that will be able to mentor the next generation of senior level employees. And then those employees can mentor the other staff and new staff who take over their positions. The mentorship eligibility parameters may need to be expanded though because based on the current standard, there will only be 1,549 employees who qualify for the mentorship program. Lots of retirees and very few employees to be mentored.
 
-Addtional Analysis/ Queries
+**Additional Analysis/ Queries**
 
-1. Expand the age range for the mentorship program eligibility. Only choosing employees who were born in the year of 1965 is severely limiting the ability of Pewlett-Hackard to adequatly fill all of the soon to be vacant positions. By expanding the age range of mentorship eligible employees from only those born in 1965 to an age range of of employees born between 1960 and 1965, 93,756 employees would be eligible (compared to the original 1,549) This will definitely help Pewlett-Hackard better prepare for the silver tsunami. See the code and data snippet below:
+1. Expand the age range for the mentorship program eligibility. By only choosing employees who were born in the year 1965, PH is severely limiting their ability to adequately fill all the soon to be vacant positions. If PH expands those parameters to include birthdates between 1960 and 1965, 93,756 employees would be eligible (compared to the original 1,549). Having this many eligibile employees would provide some flexibility to management for filling the anticipated position openings. This could definitely help Pewlett-Hackard better prepare for the "silver tsunami". See the code and data snippet below:
 
-![Additional Query 1](https://myoctocat.com/assets/images/base-octocat.svg)
+![Additional Query 1](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Additional_Query1.png)
 
-2. Although the PH Employee database contains 300,024 employees, I was curioius how many of those employees are active employees. The query below shows that of those 300,024 employees, only 240,124 are actually active. So, 20% of the records in this database are "outdated". My thoughts would be to drop the past employees from this database and archive them into their own database. See the query below used for this additonal analysis.
+2. Although the PH Employee database contains 300,024 employees, I was curious how many of those employees are active employees. The query below shows that of those 300,024 employees, only 240,124 are actually active. So, 20% of the records in this database are "outdated". My thoughts would be to drop the past employees from this database and archive them into their own database. See the query below used for this additional analysis.
 
-![Additional Query 2](https://myoctocat.com/assets/images/base-octocat.svg)
+![Additional Query 2](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Additional_Query2.png)
 
 
