@@ -23,7 +23,7 @@ Snippet of above queries results:
 
 ![Deliverable 1 A](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1a_results.png)
 
-The Retirement Titles table is exported as retirement_titles.csv. View the CSV here: [Retirement Titles](data/retirement_titles.csv)
+The Retirement Titles table is exported as retirement_titles.csv. View the CSV here: [Retirement Titles](Pewlett-Hackard-Analysis/Data/retirement_titles.csv)
 
 ***Deliverable 1 (Part 2 of 3):***
 
