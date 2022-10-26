@@ -75,9 +75,20 @@ order by t.emp_no;
 
 select count(*) from mentorship_eligibilty;
 
--------------------------------------
+
 -- Additional Summary Analysis
--------------------------------------
+
+
+select distinct on (t.emp_no) t.emp_no, e.first_name, e.last_name, e.birth_date,
+	   de.from_date, de.to_date, t.title
+INTO "mentorship_program_expanded"
+from employees e 
+inner join dept_emp de on (e.emp_no = de.emp_no)
+inner join titles t on (e.emp_no = t.emp_no)
+WHERE de.to_date='9999-01-01' 
+and t.to_date='9999-01-01' 
+and (e.birth_date BETWEEN '1960-01-01' AND '1965-12-31')
+order by t.emp_no;
 
 select count(distinct e.emp_no)
 from employees e 
@@ -89,44 +100,3 @@ from employees e
 inner join dept_emp t on (e.emp_no=t.emp_no)
 and t.to_date='9999-01-01'
 --240124
-
-select * 
-into all_year_titles 
-from 
-(select distinct extract(YEAR from birth_date) birth_year 
-from employees) e
-cross join
-(select distinct title 
-from titles) t;
-
-select t.title,extract(YEAR from e.birth_date) birth_year,count(*) tot_cnt
-into emp_year_titles 
-from 
-(SELECT DISTINCT ON (emp_no) emp_no, title
-FROM titles
-WHERE to_date='9999-01-01'
-ORDER BY emp_no, to_date DESC) t
-inner join employees e on (e.emp_no=t.emp_no)
-group by t.title,extract(YEAR from e.birth_date)
-order by t.title,extract(YEAR from e.birth_date)
-;
-
-select ayt.birth_year,ayt.title,
-COALESCE(tot_cnt, 0) tot_cnt from 
-all_year_titles ayt 
-left join emp_year_titles eyt
-on (ayt.birth_year=eyt.birth_year
-and ayt.title=eyt.title );
-
-CREATE EXTENSION IF NOT EXISTS tablefunc;
-
-SELECT * FROM crosstab ( 
-	$$select ayt.birth_year,ayt.title,
-COALESCE(tot_cnt, 0) tot_cnt from 
-all_year_titles ayt 
-left join emp_year_titles eyt
-on (ayt.birth_year=eyt.birth_year
-and ayt.title=eyt.title )$$
-)
-AS final_result ("birth_year" float8,"Assistant Engineer" bigint, "Engineer" bigint, "Manager" bigint, "Senior Engineer" bigint,"Senior Staff" bigint,"Staff" bigint, "Technique Leader" bigint)
-order by 1;
