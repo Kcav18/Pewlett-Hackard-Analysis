@@ -83,7 +83,7 @@ Snippet of above query result:
 
 ![Mentorship Eligibility Results](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable2_results.png)
 
-The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Mentorship Eligibility](Data/mentorship_eligibilty.csv)
+The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Mentorship Eligibility](Data/mentorship_eligibility.csv)
 
 ***Deliverable 3:***
 *This full readme is the requirement for deliverable 3.*
