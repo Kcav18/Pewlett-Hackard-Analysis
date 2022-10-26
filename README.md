@@ -44,7 +44,7 @@ Snippet of above queries results:
 
 ![Deliverable 1 B](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1b_results.png)
 
-The Unique Titles table is exported as unique_titles.csv. View the CSV here: [Unique Titles](data/unique_titles.csv)
+The Unique Titles table is exported as unique_titles.csv. View the CSV here: [Unique Titles](Data/unique_titles.csv)
 
 ***Deliverable 1 (Part 3 of 3):***
 
@@ -61,7 +61,7 @@ Screenshot of above query results:
 
 ![Deliverable 1 C](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable1c_results.png)
 
-The Retiring Titles table is exported as retiring_titles.csv. View the CSV here: [Retiring Titles](data/retiring_titles.csv)
+The Retiring Titles table is exported as retiring_titles.csv. View the CSV here: [Retiring Titles](Data/retiring_titles.csv)
 
 ***Deliverable 2***
 
@@ -83,7 +83,7 @@ Snippet of above query result:
 
 ![Mentorship Eligibility Results](https://github.com/Kcav18/Pewlett-Hackard-Analysis/blob/main/Queries/Deliverable2_results.png)
 
-The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Mentorship Eligibility](data/mentorship_eligibilty.csv)
+The Mentorship Eligibility table is exported as mentorship_eligibility.csv. View the CSV here: [Mentorship Eligibility](Data/mentorship_eligibilty.csv)
 
 ***Deliverable 3:***
 *This full readme is the requirement for deliverable 3.*
